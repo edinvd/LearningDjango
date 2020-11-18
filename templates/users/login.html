@@ -15,16 +15,10 @@
 
         {% if messages %}
             {% for message in messages %}
-                {% if message.tags == 'success' %}
-                <div class="alert alert-success">
-                    {{ message }}
-                </div>
-            {% else %}
-                <div class="alert alert-danger">
+                <div class="alert {% if message.tags == 'success'%}alert-success{%else%}alert-danger{%endif%}">
                     <button type='button' class='close' data-dismiss='alert'>x</button>
                     {{ message }}
                 </div>
-                {% endif %}
             {% endfor %}
         {% endif %}
 
