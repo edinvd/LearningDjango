@@ -1,0 +1,11 @@
+COMANDO PARA CORRER SERVIDOR DE DJANGO
+
+-- python manage.py runserver
+
+DETENER SERVIDOR
+
+-- CTRL + C 
+
+
+
+
