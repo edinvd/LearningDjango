@@ -17,7 +17,9 @@
                 <form method="post">
                     {% csrf_token %}
                     
-                    <div class="form_group">
+                    <!-- Formulario  -->
+                    
+                    <!-- <div class="form_group">
                         {{ form.username.label_tag }}
                         {{ form.username }}
                     </div>
@@ -31,6 +33,16 @@
                         {{ form.password.label_tag }}
                         {{ form.password }}
                     </div>
+                    -->
+
+                    {% for field in form %}
+                        <div class="form-group">
+
+                            {{ field.label_tag }}
+                            {{ field }}
+
+                        </div>
+                    {% endfor %}
 
                     <button type="submit" class="btn btn-primary">Registrar</button>
                 </form>
