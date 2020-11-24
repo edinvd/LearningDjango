@@ -6,6 +6,8 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 
+from .forms import RegisterForm
+
 def index(request):
     return render(request,'index.html', {
         'message' :  'Listado de productos',
@@ -41,3 +43,10 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'Sesión cerrada exitosamente')
     return redirect('login')
+
+def register(request):
+    form = RegisterForm()
+    
+    return render(request, 'users/register.html', {
+        'form': form
+    })
