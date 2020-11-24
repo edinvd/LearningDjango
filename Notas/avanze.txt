@@ -2,4 +2,4 @@ AVANZE DEL CURSO DE DJANGO
 
 DONDE ME QUEDE
 
-6.-Logout 1080p
+8.-Estilos en formularios 1080p
